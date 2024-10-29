@@ -4,7 +4,7 @@ export class Character{
             this.name = name
         } else {
             throw new Error("Error: name must be contains from 2 to 10 letters")
-        };
+        }
 
         if (["Bowerman", "Swordsman", "Magician", "Undead", "Daemon", "Zombie"].includes(type)) {
             this.type = type
@@ -35,12 +35,12 @@ export class Character{
             this.health -= points * (1 - this.defence / 100)
         } else {
             throw new Error("Error: character already dead")
-        };
+        }
       
         if (this.health <= 0) {
             console.log("Wasted")
         }
-    };
+    }
 }
 
 export class Bowerman extends Character {

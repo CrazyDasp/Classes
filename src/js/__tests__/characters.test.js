@@ -79,11 +79,11 @@ test("Testing create daemon", () => {
 })
 
 test("Testing wrong character with name more than 10 letters", () => {
-    expect(() => {new CreateChar.Bowerman("SuperMegaShooter", "Bowerman")}).toThrowError()
+    expect(() => {new CreateChar.Bowerman("SuperMegaShooter", "Bowerman")}).toThrow()
 })
 
 test("Testing wrong character with wrong type", () => {
-    expect(() => {new CreateChar.Bowerman("Legolas", "Hunter")}).toThrowError()
+    expect(() => {new CreateChar.Bowerman("Legolas", "Hunter")}).toThrow()
 })
 
 test("Testing level up character", () => {
@@ -104,14 +104,14 @@ test("Testing level up dead character", () => {
     let bowemanChar = new CreateChar.Bowerman("Legolas", "Bowerman")
     bowemanChar.damage(500)
 
-    expect(() => {bowemanChar.levelUp()}).toThrowError()
+    expect(() => {bowemanChar.levelUp()}).toThrow()
 })
 
 test("Testing damage dead character", () => {
     let bowemanChar = new CreateChar.Bowerman("Legolas", "Bowerman")
     bowemanChar.damage(500)
 
-    expect(() => {bowemanChar.damage(50)}).toThrowError()
+    expect(() => {bowemanChar.damage(50)}).toThrow()
 })
 
 test("Testing kill character", () => {
